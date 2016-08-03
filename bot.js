@@ -54,9 +54,10 @@ const actions = {
       cb();
     }
   },
+  const name = firstEntityValue(entities, 'contact');
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
-    const name = firstEntityValue(entities, 'contact');
+    //const name = firstEntityValue(entities, 'contact');
     if (name) {
       context.name = name; // store it in context
     }
@@ -72,7 +73,6 @@ const actions = {
   ['get-meme'](sessionId, context, cb) {
     // Here should go the api call, e.g.:
     // context.forecast = apiCall(context.loca)
-	const name = firstEntityValue(entities, 'contact');
     context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
     cb(context);
   },
