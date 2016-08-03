@@ -72,6 +72,7 @@ const actions = {
   ['get-meme'](sessionId, context, cb) {
     // Here should go the api call, e.g.:
     // context.forecast = apiCall(context.loca)
+	const name = firstEntityValue(entities, 'contact');
     context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
     cb(context);
   },
