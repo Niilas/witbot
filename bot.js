@@ -70,7 +70,7 @@ const actions = {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
 	const sex = secondEntityValue(entities, 'sex')
-    if (name && sex === 'female' || sex === 'Female')) {
+    if (name && sex === 'female' || sex === 'Female') {
       context.name = name; // store it in context
 	  //context.sex = sex;
 	
