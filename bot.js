@@ -69,9 +69,8 @@ const actions = {
 	  sex = 'f';
 	  } 
 	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex='+sex;
-    }
-
     cb(context);
+  }
   },
 
   error(sessionId, context, error) {
