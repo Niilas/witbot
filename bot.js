@@ -69,15 +69,15 @@ const actions = {
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
-	var sex = secondEntityValue(entities, 'sex')
+	const sex = secondEntityValue(entities, 'sex')
     if (name) {
       context.name = name; // store it in context
 	  //context.sex = sex;
 	
-	 if(sex == "female" || sex == "Female") {
+	 if(sex === 'female' || sex === 'Female') {
 	 context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=f';
 	 }else{
-	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m/billgen-api.png';
+	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
 	  }
 	  //context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
       cb(context);
