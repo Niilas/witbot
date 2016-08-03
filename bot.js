@@ -66,7 +66,7 @@ const actions = {
     }
   },
   //const name;
-  merge(context, entities, message, cb) {
+  merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
 	var sex = secondEntityValue(entities, 'sex')
