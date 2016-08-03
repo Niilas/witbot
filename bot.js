@@ -82,13 +82,14 @@ const actions = {
 	  //context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
       cb(context);
 	}
+    error(sessionId, context, error) {
+    console.log(error.message);
+  },
   },
   
 
-  error(sessionId, context, error) {
-    console.log(error.message);
-  },
-}
+
+
 
 
 
