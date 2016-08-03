@@ -70,11 +70,11 @@ const actions = {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
 	const sex = secondEntityValue(entities, 'sex')
-    if (name) {
+    if (name && sex === 'female' || sex === 'Female')) {
       context.name = name; // store it in context
 	  //context.sex = sex;
 	
-	 if(sex === 'female' || sex === 'Female') {
+	// if(sex === 'female' || sex === 'Female') {
 	 context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=f';
 	 }else{
 	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
