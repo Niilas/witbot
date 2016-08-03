@@ -68,7 +68,7 @@ const actions = {
     console.log(error.message);
   },
 
-  // fetch-weather bot executes
+  // get-meme action here
   ['get-meme'](sessionId, context, cb) {
     // Here should go the api call, e.g.:
     // context.forecast = apiCall(context.loca)
