@@ -77,7 +77,7 @@ const actions = {
 	 if(sex == "female" || sex == "Female") {
 	 context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=f';
 	 }else{
-	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
+	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m/billgen-api.png';
 	  }
 	  //context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
       cb(context);
