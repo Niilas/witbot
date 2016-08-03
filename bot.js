@@ -17,6 +17,17 @@ const firstEntityValue = (entities, entity) => {
   return typeof val === 'object' ? val.value : val;
 };
 
+const secondEntityValue = (entities, entity) => {
+  const val = entities && entities[entity] &&
+    Array.isArray(entities[entity]) &&
+    entities[entity].length > 1 &&
+    entities[entity][1].value;
+  if (!val) {
+    return null;
+  }
+  return typeof val === 'object' ? val.value : val;
+};
+
 // Bot actions
 const actions = {
   say(sessionId, context, message, cb) {
@@ -58,7 +69,7 @@ const actions = {
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
-	var sex = firstEntityValue(entities, 'sex')
+	var sex = secondEntityValue(entities, 'sex')
     if (name) {
       context.name = name; // store it in context
 	}
