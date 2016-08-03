@@ -58,9 +58,16 @@ const actions = {
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
+	const sex = firstEntityValue(entities, 'sex')
     if (name) {
       context.name = name; // store it in context
-	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
+	}
+	  if(sex='dude') {
+	  context.sex = 'm'
+	  else 
+		  context.sex = 'f'
+	  } 
+	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex='+sex;
     }
 
     cb(context);
