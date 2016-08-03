@@ -64,7 +64,7 @@ const actions = {
 	}
 	  if(sex='dude') {
 	  sex = 'm';
-	  },
+	  }
 	  if(sex='chick') {
 	  sex = 'f';
 	  }
