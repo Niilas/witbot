@@ -56,9 +56,9 @@ const actions = {
   },
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
-    const loc = firstEntityValue(entities, 'location');
-    if (loc) {
-      context.loc = loc; // store it in context
+    const name = firstEntityValue(entities, 'contact');
+    if (name) {
+      context.name = name; // store it in context
     }
 
     cb(context);
@@ -69,10 +69,10 @@ const actions = {
   },
 
   // fetch-weather bot executes
-  ['fetch-weather'](sessionId, context, cb) {
+  ['get-meme'](sessionId, context, cb) {
     // Here should go the api call, e.g.:
-    // context.forecast = apiCall(context.loc)
-    context.forecast = 'sunny';
+    // context.forecast = apiCall(context.loca)
+    context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='name'&sex=m';
     cb(context);
   },
 };
