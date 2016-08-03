@@ -56,7 +56,7 @@ const actions = {
   },
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
-    name = firstEntityValue(entities, 'name');
+    name = firstEntityValue(entities, 'contact');
     if (name) {
       context.name = name; // store it in context
     }
