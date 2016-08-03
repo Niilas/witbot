@@ -54,10 +54,10 @@ const actions = {
       cb();
     }
   },
-  const name = firstEntityValue(entities, 'contact');
+  const name = 'nimi';
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
-    //const name = firstEntityValue(entities, 'contact');
+    name = firstEntityValue(entities, 'contact');
     if (name) {
       context.name = name; // store it in context
     }
