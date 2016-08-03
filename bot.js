@@ -62,10 +62,10 @@ const actions = {
     if (name) {
       context.name = name; // store it in context
 	}
-	  if(sex=dude) {
+	  if(sex="dude") {
 	  sex = m;
 	  }
-	  if(sex=chick) {
+	  if(sex="chick") {
 	  sex = f;
 	  }
 	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex='+sex;
