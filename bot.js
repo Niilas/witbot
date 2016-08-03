@@ -71,20 +71,14 @@ const actions = {
 	  context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex='+sex;
     cb(context);
   }
-  },
+  
 
   error(sessionId, context, error) {
     console.log(error.message);
   },
+}
 
-  // get-meme action here
-  ['get-meme'](sessionId, context, cb) {
-    // Here should go the api call, e.g.:
-    // context.forecast = apiCall(context.loca)
-    //context.url = 'http://belikebill.azurewebsites.net/billgen-API.php?default=1&name='+name+'&sex=m';
-    //cb(context);
-  },
-};
+
 
 
 const getWit = () => {
