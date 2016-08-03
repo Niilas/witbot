@@ -54,7 +54,7 @@ const actions = {
       cb();
     }
   },
-  const name;
+  //const name;
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
     name = firstEntityValue(entities, 'contact');
