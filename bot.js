@@ -69,7 +69,7 @@ const actions = {
   
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the contact entity and store it into a context field
-    const name = firstEntityValue(entities, 'name');
+    const name = firstEntityValue(entities, 'contact');
 	//const sex = secondEntityValue(entities, 'sex')
     if (name) {
       context.name = name; // store it in context
