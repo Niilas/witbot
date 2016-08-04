@@ -65,7 +65,11 @@ const actions = {
       cb();
     }
   },
-  //const name;
+  bye(sessionId,context,entities,message,cb) {
+	  context = '';
+	  cb(context);
+  }
+  
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the contact entity and store it into a context field
     const name = firstEntityValue(entities, 'contact');
@@ -83,9 +87,7 @@ const actions = {
 	  console.log('variables are:', sex, name);
       cb(context);
 	},
-  emptyContext(){
-	  cb();
-  },
+  
     error(sessionId, context, error) {
     console.log(error.message);
   },
