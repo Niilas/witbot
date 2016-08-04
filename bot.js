@@ -68,7 +68,7 @@ const actions = {
   bye(sessionId,context,entities,message,cb) {
 	  context = '';
 	  cb(context);
-  }
+  },
   
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the contact entity and store it into a context field
