@@ -85,7 +85,7 @@ const actions = {
 	},
   emptyContext(){
 	  cb();
-  }
+  },
     error(sessionId, context, error) {
     console.log(error.message);
   },
